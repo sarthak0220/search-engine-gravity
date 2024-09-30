@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #202124;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.logo-container {
+    margin-top: 150px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container img {
+    width: 272px;
+    height: 92px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#searchInput {
+    width: 80%; /* Increased width */
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#searchInput:focus {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border: 1px solid #4285f4;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+#searchButton, #luckyButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0 5px;
+    border: 1px solid #dfe1e5;
+    background-color: #f8f9fa;
+    color: #5f6368;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#searchButton:hover, #luckyButton:hover {
+    border: 1px solid #c6c6c6;
+    background-color: #f1f3f4;
+}
+
+#searchButton:active, #luckyButton:active {
+    background-color: #e8eaed;
+    border-color: #c6c6c6;
+}
+
+.history-container {
+    margin-top: 50px;
+    width: 60%;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.history-container h2 {
+    margin-bottom: 20px;
+}
+
+#searchHistoryList {
+    list-style: none;
+    padding: 0;
+}
+
+#searchHistoryList li {
+    padding: 10px;
+    background-color: #f1f3f4;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #dfe1e5;
+}
+
+#clearHistoryButton {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+}
+
+#clearHistoryButton:hover {
+    background-color: darkred;
+}
+
+/* Gravity CSS: Animations to simulate gravity */
+.falling {
+    position: absolute;
+    animation: fall 2s forwards;
+}
+
+@keyframes fall {
+    0% { top: 0; }
+    100% { top: 100vh; }
+}
